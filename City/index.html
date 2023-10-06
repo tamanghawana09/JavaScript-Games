@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas City</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <canvas
+    style="background-color:black";
+    width="1680";
+    height="800";
+    id="canvas";
+    ></canvas>
+</body>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const c = canvas.getContext("2d");
+        const glowBlur = 50;
+        const glowColor = 'rgb(242,243,244)';
+    
+        //railing design
+        c.beginPath();
+        c.rect(0,750,1680,50);
+        c.fillStyle = 'rgb(245, 245, 220)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(10,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(90,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(170,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(250,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(330,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(410,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(490,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(570,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(650,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(730,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(810,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(890,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(970,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1050,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1130,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1210,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1290,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1370,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1450,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1530,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1610,620,50,130);
+        c.fillStyle = 'rgb(90, 15, 24)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(0,570,1680,50);
+        c.fillStyle = 'rgb(245, 245, 220)';
+        c.fill();
+
+        //snow man
+        c.beginPath();
+        c.arc(150,670,150,0,Math.PI*2);
+        c.fillStyle='rgb(242, 243, 244)'
+        c.fill();
+
+        c.beginPath();
+        c.arc(110,510,100,0,Math.PI*2);
+        c.fillStyle = 'rgb(242, 243, 244)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(70,490,18,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(130,470,18,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(110,510,10,0,Math.PI*2);
+        c.fillStyle = 'rgb(203, 65, 11)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(65,540,5,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(85,550,5,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(105,552,5,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(130,545,5,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(150,530,5,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        c.beginPath();
+        c.arc(160,510,5,0,Math.PI*2);
+        c.fillStyle = "black";
+        c.fill();
+
+        
+        //cloud effect
+        c.beginPath();
+        c.arc(100,110,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(200,90,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(200,130,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(280,115,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(20,100,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(330,110,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(500,80,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(570,70,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(770,110,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(680,95,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(640,-10,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(740,-10,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(600,120,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(475,20,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(400,0,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(400,10,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(300,20,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(100,20,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(150,20,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(200,20,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+        
+
+        c.beginPath();
+        c.arc(850,-10,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(850,0,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(950,20,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(920,80,80,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        c.beginPath();
+        c.arc(1020,10,60,0,Math.PI*2);
+        c.fillStyle ='rgb(255, 250, 250)';
+        c.fill();
+
+        //house
+        c.beginPath();
+        c.rect(500,300,200,270);
+        c.fillStyle ='rgb(72, 99, 156)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(700,250,200,320);
+        c.fillStyle ='rgb(113, 47, 121)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(900,320,200,250);
+        c.fillStyle ='rgb(247, 153, 110)';
+        c.fill();
+        
+        c.beginPath();
+        c.rect(400,400,100,170);
+        c.fillStyle ='rgb(153, 247, 110)';
+        c.fill();
+
+        c.beginPath();
+        c.rect(1100,400,150,170);
+        c.fillStyle ='rgb(242, 99, 102)';
+        c.fill();
+
+        //windows
+        c.beginPath();
+        c.rect(410,415,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(460,415,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(410,465,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(460,465,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(410,515,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(460,515,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(725,265,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(765,265,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(805,265,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(845,265,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(725,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(765,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(805,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(845,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(725,375,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(765,375,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(805,375,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(845,375,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(725,430,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(765,430,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(805,430,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(845,430,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(725,485,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(765,485,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(805,485,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(845,485,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(725,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(765,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(805,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(845,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(915,340,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(960,340,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1005,340,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1050,340,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(915,390,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(960,390,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1005,390,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1050,390,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(915,440,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(960,440,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1005,440,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1050,440,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(915,490,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(960,490,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1005,490,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1050,490,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(915,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(960,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1005,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1050,535,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(1120,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1160,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1200,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(1120,465,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1160,465,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1200,465,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.rect(1120,510,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1160,510,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(1200,510,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+
+        c.beginPath();
+        c.rect(530,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(570,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(610,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(650,320,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(530,370,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(570,370,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(610,370,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(650,370,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+
+        c.beginPath();
+        c.rect(530,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(570,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(610,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(650,420,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(650,470,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(530,470,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(570,470,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(610,470,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(650,520,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(530,520,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(570,520,25,35);
+        c.fillStyle ="black";
+        c.fill();
+
+        c.beginPath();
+        c.rect(610,520,25,35);
+        c.fillStyle ="black";
+        c.fill();
+      
+        //moon effect
+        c.beginPath();
+        c.arc(1520,120,70,0,Math.PI*2);
+        c.fillStyle = 'rgb(242,243,244)';
+        c.shadowColor = glowColor;
+        c.shadowBlur=   glowBlur;
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
+        c.globalCompositeOperation = "lighter";
+        c.fill();
+
+        c.beginPath();
+        c.arc(1000,250,4,0,Math.PI*2);
+        c.arc(500,200,4,0,Math.PI*2);
+        c.fillStyle = 'rgb(242,243,244)';
+        c.shadowColor = glowColor;
+        c.shadowBlur= 10;
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
+        c.globalCompositeOperation = "lighter";
+        c.fill();
+
+
+        c.beginPath();
+        c.arc(800,200,4,0,Math.PI*2);
+        c.arc(30,200,4,0,Math.PI*2);
+        c.fillStyle = 'rgb(242,243,244)';
+        c.shadowColor = glowColor;
+        c.shadowBlur= 10;
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
+        c.globalCompositeOperation = "lighter";
+        c.fill();
+
+        c.beginPath();
+        c.arc(1200,100,4,0,Math.PI*2);
+        c.arc(300,300,4,0,Math.PI*2);
+        c.fillStyle = 'rgb(242,243,244)';
+        c.shadowColor = glowColor;
+        c.shadowBlur= 10;
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
+        c.globalCompositeOperation = "lighter";
+        c.fill();
+
+    
+    </script>
+</html>
